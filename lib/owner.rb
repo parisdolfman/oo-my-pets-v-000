@@ -1,6 +1,7 @@
 class Owner
 
 attr_reader :species
+attr_accessor :name
 
 @@all = []
 
@@ -16,4 +17,14 @@ end
 
 def self.count
  self.all.length
+end
+
+def self.reset_all
+  self.all.clear
+end
+
+def say_species
+ "I am a #{@species}."
+end
+
 end
