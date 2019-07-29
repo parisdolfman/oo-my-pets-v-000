@@ -2,16 +2,18 @@ class Owner
 
 attr_reader :species
 
-OWNERS = []
+@@all = []
 
-def initialize(species)
-  @species = species
- OWNERS << self
+def initialize(name)
+  @name = name
+  @species = "human"
+  @@all << self
 end
 
 def self.all
-  OWNERS
+  @@all
 end
 
-
+def self.count
+ self.all.length
 end
