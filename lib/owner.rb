@@ -83,7 +83,7 @@ def list_pets
   dogs = @pets[:dogs].size
   cats = @pets[:cats].size
   fish = @pets[:fishes].size
-  puts "I have #{fish} fish, #{dogs} dog(s), and #{cats} cat(s)."
+  return "I have #{fish} fish, #{dogs} dog(s), and #{cats} cat(s)."
 end
 
 end
