@@ -32,5 +32,22 @@ def buy_fish(name)
   @pets[:fishes] << Fish.new(name)
 end
 
+def buy_cat(name)
+  @pets[:cats] << Cat.new(name)
+end
+
+def buy_dog(name)
+  @pets[:dogs] << Dog.new(name)
+end
+
+def walk_dogs
+  @pets.collect do |animal, instance|
+    if animal == :dogs
+    instance.each do |dog|
+      dog.mood = "happy"
+    end
+    end
+  end
+end
 
 end
