@@ -43,10 +43,39 @@ end
 def walk_dogs
   @pets.collect do |animal, instance|
     if animal == :dogs
-    instance.each do |dog|
-      dog.mood = "happy"
+      instance.each do |dog|
+        dog.mood = "happy"
+      end
     end
+  end
+end
+
+def play_with_cats
+  @pets.collect do |animal, instance|
+    if animal == :cats
+      instance.each do |cat|
+        cat.mood = "happy"
+      end
     end
+  end
+end
+
+def feed_fish
+  @pets.collect do |animal, instance|
+    if animal == :fishes
+      instance.each do |fish|
+        fish.mood = "happy"
+      end
+    end
+  end
+end
+
+def sell_pets
+  @pets.collect do |animal, instance|
+      instance.each do |pet|
+        pet.mood = "nervous"
+    end
+    instance.clear
   end
 end
 
